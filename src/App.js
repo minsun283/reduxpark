@@ -1,39 +1,20 @@
+import "./App.css";
+import { Container, Col, Row } from "react-bootstrap";
 
-import './App.css';
-import { useDispatch , useSelector} from 'react-redux';
+import "bootstrap/dist/css/bootstrap.min.css";
+import ContactForm from "./component/ContactForm";
+import ContactList from "./component/ContactList";
 
 function App() {
-  const count = useSelector(state=>state.count)
-  const dispatch = useDispatch()
-
-  const plus =()=>{
-    dispatch({type:"INCREMENT"}) //액션을 던져줌. 액션은 객체
-
-  }
-
-  const plusFive =()=>{
-    dispatch({type:"INCREMENTFIVE", payload:{num:5}}) 
-
-  }
-  const minus =()=>{
-    dispatch({type:"DESCREASE"})
-  }
-
-  const minusFive=()=>{
-    dispatch({type:"DESCREASEFIVE", payload:{num:-5}})
-  }
-
-
   return (
-
-    
-    <div className='count-box'>
+  
+    <div className="container">
+      <h1 className="list">연락처 리스트</h1>
       
-      <h1>{count}</h1>
-   <button onClick={plus}>클릭하면 1증가</button>
-   <button className='button-color' onClick={plusFive}>클릭하면 5증가</button>
-   <button onClick={minus}>클릭하면 1감소</button>
-   <button className='button-color' onClick={minusFive}>클릭하면 5감소</button>
+          <div className="form-deco"><ContactForm /></div>
+       
+          <div className="list-deco"><ContactList /></div>
+      
     </div>
   );
 }
