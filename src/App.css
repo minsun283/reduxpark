@@ -29,8 +29,8 @@
     display: flex;
     justify-content: space-between;
     width: 70%;
-    border: 1px solid rgb(205, 205, 205);
-    border-radius: 10px;
+    border: 2px solid rgb(72, 72, 72);
+    border-radius: 8px;
     padding: 5px;
 }
 
@@ -41,6 +41,6 @@
 }
 
 .input{
-    width: 84%;
+    width: 74%;
     border: none;
 }
